@@ -308,7 +308,8 @@ function carMaker(int) {
   const obj = {
       odometer : int,
       drive: function(dist) {
-        var newdist = dist + this.odometer;
+        const newdist = dist + this.odometer;
+        obj.odometer = newdist;
         return newdist;
       }
   };
